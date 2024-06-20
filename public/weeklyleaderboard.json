@@ -1,0 +1,12 @@
+[
+  { "name": "Alice", "win": 15 },
+  { "name": "Bob", "win": 45 },
+  { "name": "Charlie", "win": 75 },
+  { "name": "David", "win": 25 },
+  { "name": "Eve", "win": 55 },
+  { "name": "Frank", "win": 85 },
+  { "name": "Grace", "win": 95 },
+  { "name": "Heidi", "win": 35 },
+  { "name": "Ivan", "win": 65 },
+  { "name": "Judy", "win": 5 }
+]

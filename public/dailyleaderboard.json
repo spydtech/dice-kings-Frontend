@@ -1,0 +1,12 @@
+[
+  { "name": "Emily", "win": 20 },
+  { "name": "Benjamin", "win": 50 },
+  { "name": "Sophia", "win": 80 },
+  { "name": "Daniel", "win": 30 },
+  { "name": "Olivia", "win": 60 },
+  { "name": "George", "win": 90 },
+  { "name": "Hannah", "win": 100 },
+  { "name": "Isaac", "win": 40 },
+  { "name": "Julia", "win": 70 },
+  { "name": "Kevin", "win": 10 }
+]

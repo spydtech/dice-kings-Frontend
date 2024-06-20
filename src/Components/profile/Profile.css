@@ -1,0 +1,12 @@
+.profile-img {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  margin-top: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
