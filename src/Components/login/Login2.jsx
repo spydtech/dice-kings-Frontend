@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import axios from "axios";
 import Dice from '../../assets/dice.jpg';
+import { useNavigate } from "react-router-dom";
 
 const Login2 = () => {
-  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const [serverError, setServerError] = useState("");
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const newErrors = {};
 
-    if (!email) newErrors.email = "Email is required.";
-    else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = "Email is invalid.";
+    if (!phoneNumber) newErrors.phoneNumber = "Phone number is required.";
+    else if (!/^\d{10}$/.test(phoneNumber)) newErrors.phoneNumber = "Phone number is invalid.";
 
     if (!password) newErrors.password = "Password is required.";
     else if (password.length < 8)
@@ -26,16 +30,29 @@ const Login2 = () => {
     return newErrors;
   };
 
-  const onSubmitForm = (event) => {
+  const onSubmitForm = async (event) => {
     event.preventDefault();
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
-      // Clear form fields after submission
-      setEmail("");
-      setPassword("");
-      setErrors({});
+      try {
+        const response = await axios.post("http://localhost:8000/login", {
+          phoneNumber,
+          password,
+        });
 
-      alert("Login successful!");
+        if (response.data.success) {
+          // Clear form fields after submission
+          setPhoneNumber("");
+          setPassword("");
+          setErrors({});
+          setServerError("");
+          navigate("/home");
+        } else {
+          setServerError(response.data.message);
+        }
+      } catch (error) {
+        setServerError("Failed to login. Please try again.");
+      }
     } else {
       setErrors(formErrors);
     }
@@ -57,17 +74,17 @@ const Login2 = () => {
         </header>
         <form onSubmit={onSubmitForm}>
           <div>
-            <label className="block mb-2 text-black" htmlFor="email">
-             Phone Number
+            <label className="block mb-2 text-black" htmlFor="phoneNumber">
+              Phone Number
             </label>
             <input
               className="w-full p-2 mb-6 text-black border-2 border-black outline-none focus:bg-gray-300"
               type="text"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="phoneNumber"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
             />
-            {errors.email && <p className="text-red-500">{errors.email}</p>}
+            {errors.phoneNumber && <p className="text-red-500">{errors.phoneNumber}</p>}
           </div>
           <div>
             <label className="block mb-2 text-black" htmlFor="password">
@@ -82,6 +99,7 @@ const Login2 = () => {
             />
             {errors.password && <p className="text-red-500">{errors.password}</p>}
           </div>
+          {serverError && <p className="text-red-500">{serverError}</p>}
           <div>
             <button
               className="w-full bg-black hover:bg-blue-800 text-white font-bold py-2 px-4 mb-6 rounded"
@@ -92,12 +110,6 @@ const Login2 = () => {
           </div>
         </form>
         <footer>
-          {/* <a
-            className="text-indigo-700 hover:text-pink-700 text-sm float-left"
-            href="#"
-          >
-            Forgot Password?
-          </a> */}
           <a
             className="text-black hover:text-blue-800 text-sm float-right"
             href="/signup"

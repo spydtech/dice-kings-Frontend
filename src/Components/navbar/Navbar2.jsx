@@ -31,7 +31,7 @@
 // //           </span> */}
 // //             {/* <div className="font-bold text-white text-xl ml-10 xl:ml-0">
 // //             <Link to={'/'}><span className='text-[40px]'>D</span>ice <span className='text-[40px]'>K</span>ing<br /></Link>
-          
+
 // //           </div> */}
 // //           </Link>
 // //           <div className="flex items-center lg:order-2">
@@ -455,7 +455,7 @@
 
 // export default Navbar2;
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Dice from "../../assets/dice.jpg";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
@@ -525,9 +525,8 @@ const Navbar2 = () => {
 
         </button>
         <div
-          className={`${
-            isOpen ? "block" : "hidden"
-          } items-center justify-between w-full lg:flex lg:w-auto lg:order-1`}
+          className={`${isOpen ? "block" : "hidden"
+            } items-center justify-between w-full lg:flex lg:w-auto lg:order-1`}
           id="mobile-menu-2"
         >
           <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-6 lg:mt-0">
@@ -535,9 +534,8 @@ const Navbar2 = () => {
               <NavLink
                 exact
                 to="/"
-                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${
-                  isActive("/") ? "border-b-2 border-purple-700" : ""
-                }`}
+                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${isActive("/") ? "border-b-2 border-purple-700" : ""
+                  }`}
                 onClick={toggleSidebar}
 
               >
@@ -549,9 +547,8 @@ const Navbar2 = () => {
               <NavLink
 
                 to="/gamezone"
-                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${
-                  isActive("/gamezone") ? "border-b-2 border-purple-700" : ""
-                }`}
+                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${isActive("/gamezone") ? "border-b-2 border-purple-700" : ""
+                  }`}
                 onClick={toggleSidebar}
               >
                 Game Zone
@@ -560,9 +557,8 @@ const Navbar2 = () => {
             <li>
               <NavLink
                 to="/addcoins"
-                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${
-                  isActive("/addcoins") ? "border-b-2 border-purple-700" : ""
-                }`}
+                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${isActive("/addcoins") ? "border-b-2 border-purple-700" : ""
+                  }`}
                 onClick={toggleSidebar}
               >
                 Add Coins
@@ -571,9 +567,8 @@ const Navbar2 = () => {
             <li>
               <NavLink
                 to="/balance"
-                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${
-                  isActive("/balance") ? "border-b-2 border-purple-700" : ""
-                }`}
+                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${isActive("/balance") ? "border-b-2 border-purple-700" : ""
+                  }`}
                 onClick={toggleSidebar}
               >
                 Balance
@@ -582,11 +577,10 @@ const Navbar2 = () => {
             <li>
               <NavLink
                 to="/withdrawcoins"
-                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${
-                  isActive("/withdrawcoins")
-                    ? "border-b-2 border-purple-700"
-                    : ""
-                }`}
+                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${isActive("/withdrawcoins")
+                  ? "border-b-2 border-purple-700"
+                  : ""
+                  }`}
                 onClick={toggleSidebar}
               >
                 Withdraw Coins
@@ -595,9 +589,8 @@ const Navbar2 = () => {
             <li>
               <NavLink
                 to="/leaderboard"
-                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${
-                  isActive("/leaderboard") ? "border-b-2 border-purple-700" : ""
-                }`}
+                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${isActive("/leaderboard") ? "border-b-2 border-purple-700" : ""
+                  }`}
                 onClick={toggleSidebar}
               >
 
@@ -607,9 +600,8 @@ const Navbar2 = () => {
             <li>
               <NavLink
                 to="/history"
-                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${
-                  isActive("/history") ? "border-b-2 border-purple-700" : ""
-                }`}
+                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${isActive("/history") ? "border-b-2 border-purple-700" : ""
+                  }`}
                 onClick={toggleSidebar}
               >
                 History
@@ -618,9 +610,8 @@ const Navbar2 = () => {
             <li>
               <NavLink
                 to="/profile"
-                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${
-                  isActive("/profile") ? "border-b-2 border-purple-700" : ""
-                }`}
+                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${isActive("/profile") ? "border-b-2 border-purple-700" : ""
+                  }`}
                 onClick={toggleSidebar}
               >
                 Profile
@@ -629,9 +620,8 @@ const Navbar2 = () => {
             <li>
               <NavLink
                 to="/message"
-                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${
-                  isActive("/message") ? "border-b-2 border-purple-700" : ""
-                }`}
+                className={`block font-lora py-2 pl-3 pr-4 text-white rounded lg:bg-transparent lg:p-0 ${isActive("/message") ? "border-b-2 border-purple-700" : ""
+                  }`}
                 onClick={toggleSidebar}
               >
                 Message
@@ -648,7 +638,7 @@ const Navbar2 = () => {
             Admin
           </a>
           <NavLink
-            to="/login"
+            to="/"
             className="text-white bg-purple-700 hover:bg-purple-800 font-lora focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
             onClick={toggleSidebar}
           >

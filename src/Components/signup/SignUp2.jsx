@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import axios from "axios";
 import Dice from "../../assets/dice.jpg";
+import { useNavigate } from "react-router-dom";
 
 const SignUp2 = () => {
   const [displayName, setDisplayName] = useState("");
@@ -8,6 +10,7 @@ const SignUp2 = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const newErrors = {};
@@ -42,28 +45,37 @@ const SignUp2 = () => {
     return newErrors;
   };
 
-  const onSubmitForm = (event) => {
+  const onSubmitForm = async (event) => {
     event.preventDefault();
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
       const userDetails = { displayName, username, phoneNumber, password };
 
-      // Store user details in local storage
-      localStorage.setItem("userDetails", JSON.stringify(userDetails));
+      try {
+        // eslint-disable-next-line no-unused-vars
+        const response = await axios.post("http://localhost:8000/register", userDetails);
+        alert("User registered successfully!");
+        navigate("/")
 
-      // Clear form fields after submission
-      setDisplayName("");
-      setUsername("");
-      setPhoneNumber("");
-      setPassword("");
-      setConfirmPassword("");
-      setErrors({});
-
-      alert("User registered successfully!");
+        // Clear form fields after submission
+        setDisplayName("");
+        setUsername("");
+        setPhoneNumber("");
+        setPassword("");
+        setConfirmPassword("");
+        setErrors({});
+      } catch (error) {
+        if (error.response && error.response.data && error.response.data.message) {
+          setErrors({ submit: error.response.data.message });
+        } else {
+          setErrors({ submit: "Failed to register user. Please try again." });
+        }
+      }
     } else {
       setErrors(formErrors);
     }
   };
+
 
   return (
     <div
@@ -71,11 +83,9 @@ const SignUp2 = () => {
       style={{
         backgroundImage:
           'url(https://www.bhmpics.com/downloads/ludo-king-Wallpapers/32.1492597.jpg)',
-          // 'url(https://wallpapercave.com/wp/wp6905024.jpg)',
         backgroundSize: "cover",
         backgroundPosition: "center",
-     
-        height:"100%"
+        height: "100%",
       }}
     >
       <div className="w-full max-w-md space-y-2 mt-4">
@@ -190,10 +200,10 @@ const SignUp2 = () => {
                 )}
               </div>
             </div>
-            <div class="mt-4 text-center">
-      <span class="text-sm text-gray-500 dark:text-gray-300">Already have an account? </span>
-      <a href="/login" class="text-blue-500 hover:text-blue-600">Login</a>
-    </div>
+            <div className="mt-4 text-center">
+              <span className="text-sm text-gray-500 dark:text-gray-300">Already have an account? </span>
+              <a href="/" className="text-blue-500 hover:text-blue-600">Login</a>
+            </div>
             <div>
               <button
                 type="submit"

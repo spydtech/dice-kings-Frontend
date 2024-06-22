@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import React from "react";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -77,7 +78,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
 
         <Route path="/message" element={<Message />} />
 
@@ -86,7 +87,7 @@ const AppContent = () => {
         <Route path="/leaderboard" element={<LeaderboardContainer />} />
         <Route path="/addcoins" element={<AddCoins />} />
         <Route path="/withdrawcoins" element={<WithdrawCoins />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/balance" element={<Balance />} />
         <Route path="/termandcondition" element={<TermandCondition />} />
         <Route path="/upcomingsingle" element={<UpcomingSingle />} />
