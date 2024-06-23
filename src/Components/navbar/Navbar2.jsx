@@ -631,7 +631,7 @@ const Navbar2 = () => {
         </div>
         <div className="hidden lg:flex items-center lg:order-2">
           <a
-            href="https://themesberg.com/product/tailwind-css/landing-page"
+            href="/admin-dashboard"
             className="text-white bg-purple-700 lg:md:xl:mr-3 mr-5 hover:bg-purple-800 focus:ring-4 font-lora ml-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:ml-8 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
             onClick={toggleSidebar}
           >

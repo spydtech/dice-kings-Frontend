@@ -61,7 +61,7 @@ import Profile from "./Components/profile/Profile";
 import SignUp from "./Components/signup/SignUp2";
 import Message from "./Components/message/Message";
 import History from "./Components/History/History";
-
+import Dashboard from "./Components/Admin/AdminDashboard/Dashboard";
 import AddCoins from "./Components/addCoines/AddCoins";
 import WithdrawCoins from "./Components/withdrawCoins/WithdrawCoins";
 import Balance from "./Components/balance/Balance";
@@ -81,7 +81,7 @@ const AppContent = () => {
         <Route path="/" element={<Login />} />
 
         <Route path="/message" element={<Message />} />
-
+        <Route path="/admin-dashboard" element={<Dashboard />} />
         <Route path="/gamezone" element={<GameZone />} />
         <Route path="/history" element={<History />} />
         <Route path="/leaderboard" element={<LeaderboardContainer />} />
