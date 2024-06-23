@@ -65,7 +65,7 @@ const Footer = () => {
     </div> */}
     <div className="mt-8  md:order-1 md:mt-0 ">
       <p className="text-center text-base font-bold text-white font-lora">
-      Dice Kings
+      SPY D TECHNOLOGY
       </p>
     </div>
   </div>
