@@ -463,9 +463,15 @@ const Navbar2 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
+  const logout = () => {
+    localStorage.clear();
+
+  }
 
   const isActive = (path) => {
     return location.pathname === path;
@@ -640,7 +646,7 @@ const Navbar2 = () => {
           <NavLink
             to="/"
             className="text-white bg-purple-700 hover:bg-purple-800 font-lora focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800"
-            onClick={toggleSidebar}
+            onClick={logout}
           >
             Logout
           </NavLink>

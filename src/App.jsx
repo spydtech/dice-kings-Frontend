@@ -61,7 +61,7 @@ import Profile from "./Components/profile/Profile";
 import SignUp from "./Components/signup/SignUp2";
 import Message from "./Components/message/Message";
 import History from "./Components/History/History";
-import Dashboard from "./Components/Admin/AdminDashboard/Dashboard";
+import Dashboard from "./Admin/Components/Dashboard";
 import AddCoins from "./Components/addCoines/AddCoins";
 import WithdrawCoins from "./Components/withdrawCoins/WithdrawCoins";
 import Balance from "./Components/balance/Balance";
@@ -71,6 +71,7 @@ import UpcomingDouble from "./Components/gamezone/double/UpcomingDouble";
 import LiveSingle from "./Components/gamezone/single/LiveSingle";
 import LiveDouble from "./Components/gamezone/double/LiveDouble";
 import LeaderboardContainer from "./Components/LeaderBoard/LeaderBoardContainer";
+import AdminRouter from "./Router/AdminRouter";
 
 const AppContent = () => {
   return (
@@ -79,9 +80,9 @@ const AppContent = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/" element={<Login />} />
-
         <Route path="/message" element={<Message />} />
-        <Route path="/admin-dashboard" element={<Dashboard />} />
+        <Route path="/admin/*" element={<AdminRouter />} />
+        <Route path="/admin1" element={<Dashboard />} />
         <Route path="/gamezone" element={<GameZone />} />
         <Route path="/history" element={<History />} />
         <Route path="/leaderboard" element={<LeaderboardContainer />} />

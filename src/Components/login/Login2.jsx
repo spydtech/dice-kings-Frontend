@@ -39,8 +39,11 @@ const Login2 = () => {
           phoneNumber,
           password,
         });
-
-        if (response.data.success) {
+        const user = response.data;
+        if (user.token) {
+          localStorage.setItem('token', user.token);
+        }
+        if (user.success) {
           // Clear form fields after submission
           setPhoneNumber("");
           setPassword("");
@@ -60,9 +63,9 @@ const Login2 = () => {
 
   return (
     <div className="flex md:flex-row flex-col justify-center items-center mt-16">
-    <div className="w-full max-w-xl m-auto">
-      <img  src= {Login}/>
-    </div>
+      <div className="w-full max-w-xl m-auto">
+        <img src={Login} />
+      </div>
       <div className="w-full max-w-xs m-auto bg-[#0d3b66] rounded p-5">
         <header>
           <img className="w-20 mx-auto mb-5" src={Dice} alt="Dice" />
