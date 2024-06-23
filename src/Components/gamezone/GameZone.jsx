@@ -136,19 +136,21 @@ const GameZone = () => {
   return (
     <>
       <Navbar2 />
+      <div className="flex flex-col  md:flex-row-reverse justify-center items-center mt-8">
+        <div>
+          <img src="https://bandkbarsupplies.com/media/catalog/product/cache/9e258016ecb5c21cebed181938df574a/i/n/ingle_dice_2.jpg" 
 
-      <div
-        className=" min-h-screen 
-        bg-[url('https://img.freepik.com/free-vector/3d-rendering-dices-illustration_52683-75998.jpg?t=st=1718782040~exp=1718785640~hmac=f33218d7871b132f79bde624ac67756ac683aad2740d322f33869a5fe25d7f28&w=996')]  bg-cover bg-center  "
-      >
-        <div className="flex flex-wrap gap-6">
+            className=" mt-20"
+          />
+        </div>
+        <div className="flex justify-center items-center flex-wrap gap-6">
           {cardData.map((card, index) => (
             <div
               key={index}
-              className=" lg:xl:md:mt-20   mt-40 flex group h-96 w-96 [perspective:1000px]"
+              className=" lg:xl:md:mt-20   md:mt-40 flex group h-96 w-96 [perspective:1000px]"
             >
               <div className=" mx-5 z-50  h-full w-full rounded-xl  ">
-                <div className=" absolute lg:xl:2xl:3xl:md:mx-4 mx-8  mt-2  h-[400px] inset-0 font-lora lg:xl:2xl:md:w-96  w-72  rounded-xl bg-[#0d3b66] px-4 text-center text-slate-200 ">
+                <div className=" absolute lg:xl:2xl:3xl:md:mx-4 mx-8  mt-2  h-[400px] inset-0 font-lora lg:xl:2xl:md:w-96  w-72  rounded-xl bg-white px-4 text-center text-black shadow-2xl">
                   <p className="text-4xl pt-4 font-lora ">{card.front}</p>
 
                   <div className="flex min-h-full flex-col justify-center items-center gap-y-4">

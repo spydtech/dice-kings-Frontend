@@ -13,7 +13,7 @@ function UpcomingSingle() {
   return (
     <>
       <Navbar2 />
-      <div className="container mx-auto p-4 bg-gray-100 mt-16">
+      <div className="container mx-auto p-4 bg-gray-200 mt-16">
         <div className="space-y-6">
           {data.map((item, index) => (
             <div

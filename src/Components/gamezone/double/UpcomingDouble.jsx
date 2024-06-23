@@ -139,10 +139,10 @@ function UpcomingDouble() {
       <Navbar2 />
 
       <div
-        className="container mt-16 mx-auto p-4 "
+        className="container mt-16 mx-auto p-4 bg-gray-200"
         style={{
           // backgroundImage: `url('https://lh4.googleusercontent.com/proxy/3nTty76lBsTqCCjryZ6x5D1HAeG-I0s_p94jPshGIy4FevLsoArPUABu-MGuMjXtahmOlf59DpmfAWJWJled6i6omAmtrjpGshbd1Za-Vrm6NMbpUsQtRc4FRq0aemn10vSh')`,
-          backgroundImage: `url('https://img.freepik.com/premium-photo/dice-air_379823-13902.jpg?w=740')`,
+         // backgroundImage: `url('https://img.freepik.com/premium-photo/dice-air_379823-13902.jpg?w=740')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backdropFilter: "blur(30px)", // Apply blur effect
