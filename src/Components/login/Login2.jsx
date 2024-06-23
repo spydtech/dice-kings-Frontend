@@ -35,7 +35,7 @@ const Login2 = () => {
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
       try {
-        const response = await axios.post("http://localhost:8000/login", {
+        const response = await axios.post("http://localhost:8000/api/v1/login", {
           phoneNumber,
           password,
         });
@@ -73,7 +73,7 @@ const Login2 = () => {
               Phone Number
             </label>
             <input
-              className="w-full p-2 mb-6 text-white border-2 border-white outline-none focus:bg-gray-300"
+              className="w-full p-2 mb-6 text-black border-2 border-black outline-none"
               type="text"
               name="phoneNumber"
               placeholder="Phone Number"
@@ -87,7 +87,7 @@ const Login2 = () => {
               Password
             </label>
             <input
-              className="w-full p-2 mb-6 text-white border-2 border-white outline-none focus:bg-gray-300"
+              className="w-full p-2 mb-6 text-black border-2 border-black outline-none"
               type="password"
               name="password"
               placeholder="Password"
