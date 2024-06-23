@@ -79,7 +79,7 @@ const SignUp2 = () => {
 
   return (
     <div
-      className="bg-gray-100 flex items-center justify-center px-6 lg:px-8"
+      className=" flex justify-start items-start ml-8"
       style={{
         backgroundImage:
           'url(https://www.bhmpics.com/downloads/ludo-king-Wallpapers/32.1492597.jpg)',
@@ -89,7 +89,7 @@ const SignUp2 = () => {
       }}
     >
       <div className="w-full max-w-md space-y-2 mt-4">
-        <div className="bg-white shadow-md rounded-md p-6">
+        <div className="bg-[#bceca6] shadow-2xl rounded-md p-6">
           <img className="mx-auto h-12 w-auto" src={Dice} alt="Dice" />
           <h2 className="my-3 text-center text-3xl font-bold tracking-tight text-gray-900">
             Sign up for an account
