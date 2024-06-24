@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Dice from "../../assets/dice.jpg";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SignUp2 = () => {
   const [displayName, setDisplayName] = useState("");
@@ -202,7 +203,7 @@ const SignUp2 = () => {
             </div>
             <div className="mt-4 text-center">
               <span className="text-sm text-gray-500 dark:text-gray-300">Already have an account? </span>
-              <a href="/" className="text-blue-500 hover:text-blue-600">Login</a>
+              <Link to="/" className="text-blue-500 hover:text-blue-600">Login</Link>
             </div>
             <div>
               <button

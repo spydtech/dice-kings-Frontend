@@ -1,57 +1,8 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"); */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 
-/* .dice {
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-} */
-/* body {
-  @apply bg-gradient-to-r from-gray-200 to-blue-200 flex items-center justify-center min-h-screen;
-}
-
-.icon {
-  @apply border border-gray-300 rounded-full flex justify-center items-center w-10 h-10 text-gray-600 hover:bg-gray-200;
-}
-
-input {
-  @apply bg-gray-200 rounded-md p-3 w-full mb-3 focus:outline-none;
-}
-
-button {
-  @apply bg-purple-700 text-white uppercase text-sm font-bold py-2 px-10 rounded-md mt-5;
-}
-
-form {
-  @apply flex flex-col items-center justify-center h-full p-10;
-}
-
-h1 {
-  @apply text-3xl font-bold mb-5;
-}
-
-.container {
-  @apply relative overflow-hidden bg-white rounded-2xl shadow-lg max-w-full min-h-[480px] w-[768px];
-}
-
-.container .form-container {
-  @apply absolute top-0 h-full transition-transform duration-500 ease-in-out w-1/2;
-}
-
-.toggle-container {
-  @apply absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-transform duration-500 ease-in-out rounded-l-3xl z-30;
-}
-
-.toggle {
-  @apply bg-purple-700 h-full bg-gradient-to-r from-indigo-500 to-purple-700 text-white relative left-full transform -translate-x-full transition-transform duration-500 ease-in-out w-[200%];
-}
-
-.toggle-panel {
-  @apply absolute top-0 h-full flex flex-col items-center justify-center p-10 text-center transition-transform duration-500 ease-in-out w-1/2;
-} */

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Dice from '../../assets/dice.jpg';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Login from "../../assets/login.svg"
 const Login2 = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -109,28 +109,21 @@ const Login2 = () => {
             </button>
           </div>
         </form>
-        {/* <footer>
-          <a
-            className="text-white hover:text-blue-800 text-sm float-right"
-            href="/signup"
+
+        <footer>
+          <Link
+            className="text-indigo-700 hover:text-pink-700 text-sm float-left"
+            to="/forget-password"
+          >
+            Forgot Password?
+          </Link>
+          <Link
+            className="text-indigo-700 hover:text-pink-700 text-sm float-right"
+            to="/signup"
           >
             Create Account
-          </a>
-        </footer> */}
-        <footer>
-  <a
-    className="text-indigo-700 hover:text-pink-700 text-sm float-left"
-    href="/forget-password"
-  >
-    Forgot Password?
-  </a>
-  <a
-    className="text-indigo-700 hover:text-pink-700 text-sm float-right"
-    href="/signup"
-  >
-    Create Account
-  </a>
-</footer>
+          </Link>
+        </footer>
 
       </div>
     </div>

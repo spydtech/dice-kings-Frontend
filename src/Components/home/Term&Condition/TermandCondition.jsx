@@ -1,22 +1,22 @@
-import React from 'react'
-import Navbar2 from '../../navbar/Navbar2'
+import React,{useEffect} from 'react'
+import Navbar2 from '../../navbar/Navbar2';
+import Footer from "../Footer/Footer"
 const TermandCondition = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
             <Navbar2 />
-            <div className="max-w-screen-xl mx-auto p-5 relative">
+            <div className="mt-16">
                 <div
-                    className="bg-cover bg-center text-center overflow-hidden"
-                    style={{
-                        minHeight: 500,
-                        backgroundImage:
-                            'url("https://www.soho2019.com/wp-content/uploads/2021/11/termsandcondition-3.png")'
-                    }}
-                    title="Woman holding a mug"
-                ></div>
-                <div className="max-w-6xl mx-auto">
+                    className="md:min-h-screen min-h-80 
+        bg-[url('https://www.financeveda.com/wp-content/uploads/2022/06/TC.png')]  bg-cover bg-center">
+
+                </div>
+                <div className=" mx-auto">
                     <div className="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
-                        <div className="bg-white relative top-0 -mt-32 p-5 sm:p-10">
+                        <div className="bg-white  -mt-32 p-5 sm:p-10">
                             <h1 href="#" className="text-gray-900 font-bold text-3xl mb-2">
                                 Important Notification
                             </h1>
@@ -580,60 +580,148 @@ const TermandCondition = () => {
 
                             <h3 className="text-xl font-bold my-5">14. Voluntary termination</h3>
                             <p className="text-base  my-2 font-lora">
-                            You are free to discontinue use of the Services on any Website at any time by intimating us of your desire to do so by sending an email to us at Playemail as the case may be. If at such time, there is a positive withdrawable cash balance in your user account, we will, subject to satisfactory verification, disburse the same to you by online transfer or by a cheque in a timely manner.
+                                You are free to discontinue use of the Services on any Website at any time by intimating us of your desire to do so by sending an email to us at Playemail as the case may be. If at such time, there is a positive withdrawable cash balance in your user account, we will, subject to satisfactory verification, disburse the same to you by online transfer or by a cheque in a timely manner.
                             </p>
                             <h3 className="text-xl font-bold my-5">15. User Account suspension</h3>
                             <p className="text-base  my-2 font-lora">
-                            We may suspend or otherwise put restrictions on your access to the Services on the Websites during investigation for any of the following reasons:
+                                We may suspend or otherwise put restrictions on your access to the Services on the Websites during investigation for any of the following reasons:
                             </p>
 
                             <p className="text-base  my-2 font-lora">
-                            * Suspected violation of Terms or other abuse of your user account;
+                                * Suspected violation of Terms or other abuse of your user account;
                             </p>
 
                             <p className="text-base  my-2 font-lora">
-                            * Suspected breach of security of your user account; or
+                                * Suspected breach of security of your user account; or
                             </p>
                             <p className="text-base  my-2 font-lora">
-                            * If there have been charge-backs on your user account.
+                                * If there have been charge-backs on your user account.
                             </p>
                             <p className="text-base  my-2 font-lora">
-                            Our decision to suspend or restrict Service or any part thereof as we deem appropriate shall be final and binding on you.
+                                Our decision to suspend or restrict Service or any part thereof as we deem appropriate shall be final and binding on you.
                             </p>
 
 
                             <h3 className="text-xl font-bold my-5">16. Breach and consequences</h3>
                             <p className="text-base  my-2 font-lora">
-                            In the event of breach of any of the Terms being evidenced from our investigation or if there is reasonable belief, in our sole discretion, that your continued access to the Portal or any Website is detrimental to the interests of play, our other users or the general public; we may in our sole discretion take any or all of the following actions:
+                                In the event of breach of any of the Terms being evidenced from our investigation or if there is reasonable belief, in our sole discretion, that your continued access to the Portal or any Website is detrimental to the interests of play, our other users or the general public; we may in our sole discretion take any or all of the following actions:
                             </p>
                             <p className="text-base  my-2 font-lora">
-                            * Restrict games between users suspected of colluding or cheating;
+                                * Restrict games between users suspected of colluding or cheating;
                             </p>
                             <p className="text-base  my-2 font-lora">
-                            * Permanently suspend your user account on the Website;
+                                * Permanently suspend your user account on the Website;
                             </p>
                             <p className="text-base  my-2 font-lora">
-                            * Forfeit the cash balance in your user account;
+                                * Forfeit the cash balance in your user account;
                             </p>
                             <p className="text-base  my-2 font-lora">
-                            * Demand damages for breach and take appropriate civil action to recover such damages; and/or
+                                * Demand damages for breach and take appropriate civil action to recover such damages; and/or
                             </p>
                             <p className="text-base  my-2 font-lora">
-                            * Initiate prosecution for violations that amount to offences in law.
+                                * Initiate prosecution for violations that amount to offences in law.
                             </p>
                             <p className="text-base  my-2 font-lora">
-                            * Additionally, in the event of committing material breach hereof, we reserve the right to bar you from future registration on the Website.
+                                * Additionally, in the event of committing material breach hereof, we reserve the right to bar you from future registration on the Website.
                             </p>
                             <p className="text-base  my-2 font-lora">
-                            * The decision of play on the action to be taken as a consequence of breach shall be final and binding on you.
+                                * The decision of play on the action to be taken as a consequence of breach shall be final and binding on you.
                             </p>
                             <p className="text-base  my-2 font-lora">
-                            * Any action taken by play shall be without prejudice to our other rights and remedies available in law or equity
+                                * Any action taken by play shall be without prejudice to our other rights and remedies available in law or equity
+                            </p>
+
+                            <h3 className="text-xl font-bold my-5">17. Complaints, Grievances & disputes</h3>
+                            <p className="text-base  my-2 font-lora">
+                            * If you have a complaint or concern, you should in the first instance contact the customer support team at Playemail, as the case may be or write to us following the procedure given in the respective Contact Us section on the relevant Websites. Complaints should be made as soon as possible after circumstances arise that cause you to have a complaint.
+                            </p>
+
+                            <p className="text-base  my-2 font-lora">
+                            * You accept that any complaints and disputes are and remain confidential both whilst a resolution is sought and afterwards. You agree that you shall not disclose the existence, nature or any detail of any complaint or dispute to any third party.
+                            </p>
+
+                            <p className="text-base  my-2 font-lora">
+                            * play shall make efforts to resolve complaints within reasonable time.
+                            </p>
+
+                            <p className="text-base  my-2 font-lora">
+                            * Our decision on complaints shall be final and binding on you.
+                            </p>
+                            <h3 className="text-xl font-bold my-5">18. Modifications and alterations</h3>
+                            <p className="text-base  my-2 font-lora">
+                            * We may alter or modify the Terms at any time without giving prior notice to you. We may choose to notify of some changes in the Terms either by email or by displaying a message on the Portal; however, our notification of any change shall not waive your obligation to keep yourself updated about the changes in the Terms. Your continued use of any Portal and/or any Services offered constitutes your unconditional acceptance of the modified or amended Terms.
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * We may also post supplementary conditions for any Services that may be offered. In such an event, your use of those Services will be governed by the Terms as well as any such supplementary terms that those Services may be subject to.
+                            </p>
+                            <h3 className="text-xl font-bold my-5">19. Limitation of liability</h3>
+                            <p className="text-base  my-2 font-lora">
+                            1. In addition to specific references to limitation of liability of play elsewhere in the Terms, under no circumstances (including, without limitation, in contract, negligence or other tort), play shall be liable for any injury, loss, claim, loss of data, loss of income, loss of profit or loss of opportunity, loss of or damage to property, general damages or any direct, indirect, special, incidental, consequential, exemplary or punitive damages of any kind whatsoever arising out of or in connection with your access to, or use of, or inability to access or use, the Services on any Website or App in the Portal. You further agree to indemnify us and our service providers and licensors against any claims in respect of any such matter.
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            2. Without limiting the generality of the foregoing, you specifically acknowledge, agree and accept that we are not liable to you for:
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * the defamatory, undesirable or illegal conduct of any other user of the Services;
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * any loss whatsoever arising from the use, abuse or misuse of your user account or any feature of our Services on the Websites;
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * any loss incurred in transmitting information from or to us or from or to our Websites by the internet or by other connecting media;
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * any technical failures, breakdowns, defects, delays, interruptions, improper or manipulated data transmission, data loss or corruption or communications’ infrastructure failure, viruses or any other adverse technological occurrences arising in connection with your access to or use of our Services;
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * the accuracy, completeness or currency of any information services provided on the Websites;
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * any delay or failure on our part to intimate you where we may have concerns about your activities; and
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * your activities / transactions on third party websites or apps Portal accessed through links or advertisements posted in the Portal.
+                            </p>
+
+                            <p className="text-base  my-2 font-lora">
+                            3. Notwithstanding anything to the contrary contained in the Terms or elsewhere, you agree that our maximum aggregate liability for all your claims under this agreement, in all circumstances, other than for the payment of any withdrawable balance in your user account, shall be limited to Indian Rupees One Thousand only (INR. 1,000/-)
+                            </p>
+
+                            <h3 className="text-xl font-bold my-5">20. Disclaimer and indemnity</h3>
+                            <h1 className='font-bold text-lg'>Indemnity</h1>
+                            <p className="text-base  my-2 font-lora">
+                            * To the extent permitted by law, and in consideration for being allowed to participate in the Activity, you hereby agree to indemnify, save and hold harmless and defend us (to the extent of all benefits and awards, cost of litigation, disbursements and reasonable attorney's fees that we may incur in connection therewith including any direct, indirect or consequential losses, any loss of profit and loss of reputation) from any claims, actions, suits, taxes, damages, injuries, causes of action, penalties, interest, demands, expenses and/or awards asserted or brought against us by any person in connection with:
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * infringement of their intellectual property rights by your publication of any content on our Website.
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * defamatory, offensive or illegal conduct of any other player or for anything that turns out to be misleading, inaccurate, defamatory, threatening, obscene or otherwise illegal whether originating from another player or otherwise;
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * use, abuse or misuse of your user account on our Website in any manner whatsoever;
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * any disconnections, technical failures, system breakdowns, defects, delays, interruptions, manipulated or improper data transmission, loss or corruption of data or communication lines failure, distributed denial of service attacks, viruses or any other adverse technological occurrences arising in connection with your access to or use of our Website; and
+                            </p>
+                            <p className="text-base  my-2 font-lora">
+                            * access of your user account by any other person accessing the Services using your login or password, whether or not with your authorization.
+                            </p>
+                            <h3 className="text-xl font-bold my-5">21. Governing law, dispute resolution</h3>
+
+                            <p className="text-base  my-2 font-lora">
+                            * The Terms and Privacy Policy shall be interpreted in accordance with the laws of India.
+                            </p>
+
+                            <h3 className="text-xl font-bold my-5">22. Responsible Game Play</h3>
+                            <p className="text-base  my-2 font-lora">
+                            We encourage all players to play responsibly. We are committed to helping players who wish to stop playing or who wish to limit the amount that they play.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
+            <Footer />
 
         </>
     )
