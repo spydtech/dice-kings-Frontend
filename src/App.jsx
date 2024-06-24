@@ -72,7 +72,8 @@ import LiveSingle from "./Components/gamezone/single/LiveSingle";
 import LiveDouble from "./Components/gamezone/double/LiveDouble";
 import LeaderboardContainer from "./Components/LeaderBoard/LeaderBoardContainer";
 import AdminRouter from "./Router/AdminRouter";
-
+import ForgetPassword from "./Components/forgetPassword/ForgetPassword";
+import SetPassword from "./Components/confirmPassword/ConfirmPassword"
 const AppContent = () => {
   return (
     <div className="content">
@@ -84,6 +85,8 @@ const AppContent = () => {
         <Route path="/admin/*" element={<AdminRouter />} />
         <Route path="/admin1" element={<Dashboard />} />
         <Route path="/gamezone" element={<GameZone />} />
+        <Route path="/forget-password" element={<ForgetPassword />} />
+        <Route path="/set-new-password" element={<SetPassword />} />
         <Route path="/history" element={<History />} />
         <Route path="/leaderboard" element={<LeaderboardContainer />} />
         <Route path="/addcoins" element={<AddCoins />} />
