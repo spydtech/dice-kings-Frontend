@@ -74,6 +74,7 @@ import LeaderboardContainer from "./Components/LeaderBoard/LeaderBoardContainer"
 import AdminRouter from "./Router/AdminRouter";
 import ForgetPassword from "./Components/forgetPassword/ForgetPassword";
 import SetPassword from "./Components/confirmPassword/ConfirmPassword"
+import AdminLogin from "./Components/login/AdminLogin";
 const AppContent = () => {
   return (
     <div className="content">
@@ -81,6 +82,7 @@ const AppContent = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/" element={<Login />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/message" element={<Message />} />
         <Route path="/admin/*" element={<AdminRouter />} />
         <Route path="/admin1" element={<Dashboard />} />
