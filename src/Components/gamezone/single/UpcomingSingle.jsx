@@ -1,10 +1,28 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unknown-property */
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Data from "./singlejson";
 import Navbar2 from "../../navbar/Navbar2";
+import axios from "axios";
+import { useEffect } from "react";
 
 function UpcomingSingle() {
   const data = Data();
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/v1/users");
+        setUsers(response.data); // Limit to four members
+      } catch (error) {
+        console.error('Error fetching data', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handlePlayClick = (item) => {
     localStorage.setItem("selectedItem", JSON.stringify(item));
@@ -15,24 +33,24 @@ function UpcomingSingle() {
       <Navbar2 />
       <div className="container mx-auto p-4 bg-gray-200 mt-16">
         <div className="space-y-6">
-          {data.map((item, index) => (
+          {users.map((user, index) => (
             <div
               key={index}
               className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow flex flex-col md:flex-row md:justify-between"
             >
               <div>
                 <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                  {item.name}
+                  {user.username}
                 </h2>
                 <p className="text-gray-600 mb-2">
-                  <span className="font-bold">Game:</span> {item.game}
+                  <span className="font-bold">Game:</span> LUDO
                 </p>
                 <p className="text-gray-600 mb-2">
-                  <span className="font-bold">Entry Fee:</span> {item.entry}
+                  <span className="font-bold">Entry Fee:</span> 500
                 </p>
               </div>
               <div className="flex justify-end items-center mt-4 md:mt-0">
-                <Link to="/livesingle" onClick={() => handlePlayClick(item)}>
+                <Link to="/livesingle" onClick={() => handlePlayClick(user)}>
                   <button className="bg-purple-700 w-32 font-bold text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors animate-bg">
                     Play
                   </button>

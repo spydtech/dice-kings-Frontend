@@ -133,12 +133,13 @@ const GameZone = () => {
     // },
   ];
 
+
   return (
     <>
       <Navbar2 />
       <div className="flex flex-col  md:flex-row-reverse justify-center items-center mt-8">
         <div>
-          <img src="https://bandkbarsupplies.com/media/catalog/product/cache/9e258016ecb5c21cebed181938df574a/i/n/ingle_dice_2.jpg" 
+          <img src="https://bandkbarsupplies.com/media/catalog/product/cache/9e258016ecb5c21cebed181938df574a/i/n/ingle_dice_2.jpg"
 
             className=" mt-20"
           />
