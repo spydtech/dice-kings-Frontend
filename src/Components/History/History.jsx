@@ -6,8 +6,8 @@ const History = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const list = await axios.get("./MOCK_DATA.json");
-      // console.log(list)
+      const list = await axios.get("http://localhost:8000/api/v1/all-history");
+      console.log(list)
       setData(list.data);
     };
     getData();
@@ -15,17 +15,7 @@ const History = () => {
 
   return (
     <>
-      {/* <div className=" flex justify-between m-3 px-2 md:px-3">
-        <button className=" border-2 border-black px-2 rounded-lg text-xs md:text-sm md:border-4 font-bold lg:text-lg" >
-          PLAY
-        </button>
-        <button className=" border-2 border-black px-2 rounded-lg text-xs md:text-sm md:border-4 font-bold lg:text-lg">
-          WITHDRAW
-        </button>
-        <button className=" border-2 border-black px-2 rounded-lg text-xs md:text-sm md:border-4 font-bold lg:text-lg">
-          TRANSACTION
-        </button>
-      </div> */}
+    
       <Navbar2 />
       <h1 className="text-center font-lora text-[30px]  mt-20 font-semibold md:text-[40px] md:text-center">
         History
@@ -41,20 +31,25 @@ const History = () => {
               <th className=" border-2 px-2 border-black">Room Id</th>
               <th className=" border-2 px-2 border-black">Winner</th>
               <th className=" border-2 px-2 border-black">Winner Coins</th>
-              <th className=" border-2 px-2 border-black">Date & Time</th>
+              <th className=" border-2 px-2 border-black">Date</th>
+              <th className=" border-2 px-2 border-black">Time</th>
             </tr>
           </thead>
           <tbody>
             {data.map((d) => {
               return (
                 <tr>
-                  {Object.keys(data[0]).map((i) => {
-                    return (
-                      <td className=" border-2 px-2 border-black text-center">
-                        {d[i]}
-                      </td>
-                    );
-                  })}
+              
+                      <td className=" border-2 px-2 border-black text-center"> {d.game}</td>
+                      <td className=" border-2 px-2 border-black text-center"> {d.entryCoins}</td>
+                      <td className=" border-2 px-2 border-black text-center"> {d.dareBy}</td>
+                      <td className=" border-2 px-2 border-black text-center"> {d.acceptedBy}</td>
+                      <td className=" border-2 px-2 border-black text-center"> {d.roomId}</td>
+                      <td className=" border-2 px-2 border-black text-center"> {d.winner}</td>
+                      <td className=" border-2 px-2 border-black text-center"> {d.winnerCoins}</td>
+                      <td className=" border-2 px-2 border-black text-center"> {d.date}</td>
+                      <td className=" border-2 px-2 border-black text-center"> {d.time}</td>
+                 
                 </tr>
               );
             })}

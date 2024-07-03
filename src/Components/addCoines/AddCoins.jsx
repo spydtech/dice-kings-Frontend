@@ -145,7 +145,7 @@ const AddCoins = () => {
   return (
     <>
       <Navbar2 />
-      <div className="flex md:justify-between  justify-center items-center  flex-row mt-20 ">
+      <div className="flex md:justify-between  justify-center items-center  md:flex-row  flex-col mt-20 ">
         <div>
           <button className="w-[200px] md:ml-4 bg-[#0071bc] h-[50px] my-3 flex items-center justify-center  cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1]  hover:before:left-0 text-[#fff]" name="userid"
             value={formData.uniqueId} // Display uniqueId here
